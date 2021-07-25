@@ -133,7 +133,7 @@ searchBar.addEventListener('keyup', () => {
    
     let searchValue = searchBar.value.toLowerCase();
     let card = document.getElementsByClassName("card");
-    let name = document.getElementsByName("name");
+    let name = document.getElementsByClassName("name");
 
     for (let i =0; i< card.length; i++) {
         if(name[i].innerHTML.toLowerCase().indexOf(searchValue) > -1 ) {
