@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    background-color: lightblue;
+}
+
+/*HEader section*/
+header {
+    text-align: center;
+    padding: 20px;
+    justify-content: center;
+}
+.title {
+    font-size: 4vw;
+    font-weight: bolder;
+    color: lightseagreen;
+}
+.search-bar {
+    width: 60vw;
+    height: 40px;
+    padding: 5px;
+    margin-top: 10px;
+    align-items: baseline;
+    border: black 1px solid;
+    border-radius: 5px;
+    background-color: #FFF;
+}
+
+/*Main section for cards */
+.grid-container {
+    margin: 20px;
+    padding: 00px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+/*  Card Styles */
+.card {
+    width: 300px;
+    margin: 5px;
+    border: 1px #778 solid;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: lightseagreen;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.29);
+    cursor: pointer;
+    transition: .6s;
+}
+.card:hover {
+    background-color: #FBEAFF;
+}
+
+
+.avatar {
+    border-radius: 50%;
+    border: 1px solid gray;
+    width: 120px;
+    margin-top: 5px;
+
+}
+.text-container {
+    padding-bottom: 7px;
+    
+}
+.name {
+    font-size: 18px;
+    font-weight: bold;
+}
+.text-container .email{
+    color: white;
+}
+
+
+/* Overlay */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgb(100, 100, 100, 0.6);
+}
+.modal {
+    width: 375px;
+    margin: 15% auto auto;
+    position: relative;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #778;
+    border-radius: 15px;
+    padding: 30px 20px;
+}
+
+
+.modal-close {
+    position: absolute;
+    top: 8px;
+    right: 15px;
+    cursor: pointer;
+    border: #778 solid 1px;
+    border-radius: 20%;
+    font-weight: bold;
+    padding: 5px 10px;
+    
+}
+
+
+.hidden {
+    display: none;
+}
+
+/* Modal Arrows */
+.arrows {
+    display: flex;
+    justify-content: space-around;
+}
+.arrow-left {
+    transform: rotate(180deg);
+    margin-right: auto;
+}
+
+.arrow-left,
+.arrow-right {
+    cursor: pointer;
+    padding: 5px;
+
+    
+}
