@@ -8,7 +8,7 @@ const modalClose = document.querySelector(".modal-close");
 const searchBar = document.querySelector(".search-bar");
 const arrowRight = document.querySelector(".arrow-right");
 const arrowLeft = document.querySelector(".arrow-left");
-let modalIndex = 0;
+let modalIndex;
 
 
 //Fetch
@@ -104,17 +104,17 @@ modalClose.addEventListener('click', (e) => {
 //********** 
 //Arrow modal
 //********** 
-arrowRight.addEventListener('click', e =>  {
-    //increase index if index is less than 11
-    if (modalIndex < 11) {
+arrowRight.addEventListener('click', e =>  {  
+    if(modalIndex < 11){
         modalIndex++;
-        displayModal(modalIndex)
-
-    } else if (modalIndex === 11) {
-        modalIndex = 0;
+        displayModal(modalIndex)  
+  // else if the index is 11 change it to 0      
+    }else { (modalIndex === 11)
+            modalIndex = 0;
         displayModal(modalIndex);
     }
-});
+ });
+
 
 arrowLeft.addEventListener('click', e =>  {
     if(modalIndex > 0){
