@@ -51,6 +51,7 @@ function displayEmployees(employeeData) {
     `
     });
     gridContainer.innerHTML = employeeHTML;
+    modalIndex = index;
 }
 
 
