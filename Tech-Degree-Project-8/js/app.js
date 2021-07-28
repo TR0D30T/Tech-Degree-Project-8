@@ -51,7 +51,7 @@ function displayEmployees(employeeData) {
     `
     });
     gridContainer.innerHTML = employeeHTML;
-    modalIndex = index;
+    
 }
 
 
@@ -78,6 +78,7 @@ function displayModal(index) {
         
         overlay.classList.remove("hidden");
         modalContainer.innerHTML = modalHTML;
+        modalIndex = index;
 }
 
 //======
