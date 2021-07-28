@@ -131,21 +131,31 @@ arrowLeft.addEventListener('click', e =>  {
 
 //** Filter search feature on 'keyup' 
 
-searchBar.addEventListener('keyup', () => {
-   
-    let searchValue = searchBar.value.toLowerCase();
-    let card = document.getElementsByClassName("card");
-    let name = document.getElementsByClassName("name");
+const cardNames = document.querySelectorAll('.text-container h2');
+//console.log(cardNames); --> NodeList[]
 
-    for (let i =0; i< card.length; i++) {
-        if(name[i].innerHTML.toLowerCase().indexOf(searchValue) > -1 ) {
-            card[i].style.display = '';
+const handleSearch = e => {
+    const searchTarget = e.target.value.toLowerCase();
+
+    cardNames.forEach(cardName => {
+        const name = cardName.textContent.toLowerCase();
+        const card = cardName.parentElement;
+        
+
+        if(name.includes(searchTarget)) {
+            card.style.display = "flex";
         } else {
-            card[i].style.display = 'none';
+            card.style.display = "";
         }
-    }
+        
+    });
+   
 
 
-});
+}
+
+searchBar.addEventListener('keyup', handleSearch);
+
+
 
 
